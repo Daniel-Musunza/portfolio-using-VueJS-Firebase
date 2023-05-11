@@ -6,6 +6,7 @@ import HomeView from '../views/HomeView.vue'
 import Register from '../components/core/Register.vue'
 import ForgotPassword from '../components/core/ForgotPassword.vue'
 import Settings from '../components/Settings.vue'
+import Documentations from '../components/Documentations.vue'
 import AddSkill from '../components/AddSkill.vue'
 import AddExperience from '../components/AddExperience.vue'
 import AddWebsite from '../components/AddWebsite.vue'
@@ -49,9 +50,18 @@ name: 'settings',
 component: Settings,
 meta: {
 title: "Settings",
-requiresAuth: false,
+requiresAuth: true,
 }
 },
+{
+    path: '/documentations',
+    name: 'Documentations',
+    component: Documentations,
+    meta: {
+    title: "Easy Development",
+    requiresAuth: false,
+    }
+    },
 {
 path: '/skills',
 name: 'skills',

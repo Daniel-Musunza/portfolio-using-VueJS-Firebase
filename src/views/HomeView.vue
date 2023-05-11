@@ -17,10 +17,10 @@
     <div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
     <div class="ast-builder-menu-1 ast-builder-menu ast-flex ast-builder-menu-1-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-hb-menu-1">
     <div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="primary-site-navigation" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation ast-inline-flex"><ul id="ast-hf-menu-1" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border ast-menu-hover-style-overline  stack-on-mobile"><li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-22"><a href="/" aria-current="page" class="menu-link">Home</a></li>
-    <li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="#about" class="menu-link">About</a></li>
     <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="#services" class="menu-link">Services</a></li>
     <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="#portfolio" class="menu-link">Portfolio</a></li>
     <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="#colophon" class="menu-link">Contact</a></li>
+    <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link  to="/documentations" class="menu-link">Easy Development</router-link></li>
     <li v-if="user" id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link to="/settings" class="menu-link">Settings</router-link></li>
     
   </ul></div></nav></div></div> </div>
@@ -60,10 +60,10 @@
     <div class="ast-mobile-header-content content-align-flex-start " v-if="mobileNav">
     <div class="ast-builder-menu-mobile ast-builder-menu ast-builder-menu-mobile-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-header-mobile-menu">
     <div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="ast-mobile-site-navigation" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation"><ul id="ast-hf-mobile-menu" class="main-header-menu ast-nav-menu ast-flex  submenu-with-border astra-menu-animation-fade  stack-on-mobile"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-22"><a href="#" aria-current="page" class="menu-link">Home</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="#about" class="menu-link">About</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="#services" class="menu-link">Services</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="#portfolio" class="menu-link">Portfolio</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="#colophon" class="menu-link">Contact</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link  to="/documentations" class="menu-link">Easy Development</router-link></li>
     <li v-if="user" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link to="/settings" class="menu-link">Settings</router-link></li>  
   </ul></div></nav></div></div> </div>
     </div>
@@ -136,61 +136,6 @@
     <div class="elementor-widget-container">
     <img decoding="async" width="670" height="670" src="@/assets/profile.jpg" class="attachment-full size-full wp-image-23" alt="" loading="lazy"  /> </div>
     </div>
-    </div>
-    </div>
-    </div>
-    </section>
-    <section  id="about" class="elementor-section elementor-top-section elementor-element elementor-element-8634de0 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="8634de0" data-element_type="section">
-    <div class="elementor-container elementor-column-gap-no">
-    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1fc8c09" data-id="1fc8c09" data-element_type="column">
-    <div class="elementor-widget-wrap elementor-element-populated">
-    <div class="elementor-element elementor-element-ff7837f elementor-widget elementor-widget-heading" data-id="ff7837f" data-element_type="widget" data-widget_type="heading.default">
-    <div class="elementor-widget-container">
-    <h6 class="elementor-heading-title elementor-size-default">About me</h6> </div>
-    </div>
-    <div class="elementor-element elementor-element-503ae8a elementor-widget elementor-widget-heading" data-id="503ae8a" data-element_type="widget" data-widget_type="heading.default">
-    <div class="elementor-widget-container">
-    <h2 class="elementor-heading-title elementor-size-default">I am an enthusiastic Full-stack web developer with a solid experience of over 3 years in website Design and Development.
-    </h2> </div>
-    </div>
-    <section class="elementor-section elementor-inner-section elementor-element elementor-element-fa1438c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="fa1438c" data-element_type="section">
-    <div class="elementor-container elementor-column-gap-no">
-    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-3f1a39b" data-id="3f1a39b" data-element_type="column">
-    <div class="elementor-widget-wrap elementor-element-populated">
-    <div class="elementor-element elementor-element-bcb9bf1 elementor-widget elementor-widget-heading" data-id="bcb9bf1" data-element_type="widget" data-widget_type="heading.default">
-    <div class="elementor-widget-container">
-    <h3 class="elementor-heading-title elementor-size-default">I design and Develop professional & beautiful websites
-    </h3> </div>
-    </div>
-    </div>
-    </div>
-    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-3af383f" data-id="3af383f" data-element_type="column">
-    <div class="elementor-widget-wrap elementor-element-populated">
-    <div class="elementor-element elementor-element-a52f7d0 elementor-widget elementor-widget-text-editor" data-id="a52f7d0" data-element_type="widget" data-widget_type="text-editor.default">
-    <div class="elementor-widget-container">
-    With years of experience in web design and Development I have mastered the skills of understanding client requirements according to the latest trends. I have worked with businesses from different niches so you can rely on me for yours.
-    </div>
-    </div>
-    <div class="elementor-element elementor-element-1a0118a elementor-widget elementor-widget-text-editor" data-id="1a0118a" data-element_type="widget" data-widget_type="text-editor.default">
-    <div class="elementor-widget-container">
-     I’ve spent most of these years working across different areas of Web Development like front-end development, landing pages, google-cloud, E-commerce, to my current role of full-stack Development. Having worked on various projects that are already live, I can help you with the best possible suggestions and ideas that we can proceed with. With me, you aren’t forced to accept anything. I give you a variety of options we can work on together.
-    </div>
-    </div>
-    <div class="elementor-element elementor-element-71a2fb9 elementor-widget elementor-widget-button" data-id="71a2fb9" data-element_type="widget" data-widget_type="button.default">
-    <div class="elementor-widget-container">
-    <div class="elementor-button-wrapper">
-    <a href="#" class="elementor-button-link elementor-button elementor-size-sm" role="button">
-    <span class="elementor-button-content-wrapper">
-    <span class="elementor-button-text">Read More</span>
-    </span>
-    </a>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </section>
     </div>
     </div>
     </div>
@@ -508,7 +453,7 @@ export default {
   data () {
         return {
             mobileNav: null,
-            
+          
         }
     },
   methods: {
