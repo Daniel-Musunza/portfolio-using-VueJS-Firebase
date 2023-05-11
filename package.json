@@ -9,7 +9,9 @@
   "dependencies": {
     "firebase": "^9.19.1",
     "vue": "^3.2.13",
+    "vue-editor": "^0.0.0",
     "vue-router": "^4.0.3",
+    "vue3-editor": "^0.1.1",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
