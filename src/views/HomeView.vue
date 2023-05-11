@@ -20,7 +20,7 @@
     <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="#services" class="menu-link">Services</a></li>
     <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="#portfolio" class="menu-link">Portfolio</a></li>
     <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="#colophon" class="menu-link">Contact</a></li>
-    <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link  to="/documentations" class="menu-link">Easy Development</router-link></li>
+    <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link  to="/documentations" class="menu-link">Easy Web Development</router-link></li>
     <li v-if="user" id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link to="/settings" class="menu-link">Settings</router-link></li>
     
   </ul></div></nav></div></div> </div>
@@ -63,7 +63,7 @@
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="#services" class="menu-link">Services</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="#portfolio" class="menu-link">Portfolio</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="#colophon" class="menu-link">Contact</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link  to="/documentations" class="menu-link">Easy Development</router-link></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link  to="/documentations" class="menu-link">Easy Web Development</router-link></li>
     <li v-if="user" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link to="/settings" class="menu-link">Settings</router-link></li>  
   </ul></div></nav></div></div> </div>
     </div>
@@ -140,7 +140,7 @@
     </div>
     </div>
     </section>
-    <section id="services" class="elementor-section elementor-top-section elementor-element elementor-element-6b1c0c2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6b1c0c2" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+    <section id="services" style="margin-top:5px;" class="elementor-section elementor-top-section elementor-element elementor-element-6b1c0c2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6b1c0c2" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
     <div class="elementor-container elementor-column-gap-no">
     <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-972bf78" data-id="972bf78" data-element_type="column">
     <div class="elementor-widget-wrap elementor-element-populated">
@@ -238,15 +238,6 @@
     </div>
     </div>
     </section>
-    <!-- <section class="elementor-section elementor-top-section elementor-element elementor-element-984a07b elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="984a07b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-    <div class="elementor-background-overlay"></div>
-    <div class="elementor-container elementor-column-gap-no">
-    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b75f240" data-id="b75f240" data-element_type="column">
-    <div class="elementor-widget-wrap">
-    </div>
-    </div>
-    </div>
-    </section> -->
     <section class="elementor-section elementor-top-section elementor-element elementor-element-b621b63 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b621b63" data-element_type="section">
     <div class="elementor-container elementor-column-gap-no">
       <div class="elementor-column elementor-col-50 elementor-top-column elementor-element">
@@ -365,12 +356,13 @@
             :key="index"
             :website="website"
            >
-              
+           <a :href="website.link">
                 
                 <img width="370" height="474" :src="website.webCoverPhoto" class="attachment-full size-full" alt="" decoding="async" loading="lazy"  sizes="(max-width: 370px) 100vw, 370px" />
                 <p><a :href="website.link">{{website.link}}</a></p>
+           </a>
             </div>
-            
+         
     
       </div>
       </section>

@@ -51,11 +51,11 @@
                                 :website="website"
                                >
                                
-                                   
-                                    <img width="370" height="474" :src="website.webCoverPhoto" class="attachment-full size-full" alt="" decoding="async" loading="lazy"  sizes="(max-width: 370px) 100vw, 370px" />
-                                    <div class="des">
+                               <a :href="website.link">
+                
+                                        <img width="370" height="474" :src="website.webCoverPhoto" class="attachment-full size-full" alt="" decoding="async" loading="lazy"  sizes="(max-width: 370px) 100vw, 370px" />
                                         <p><a :href="website.link">{{website.link}}</a></p>
-                                    </div>
+                                </a>
                                 </div>
                                 
                                
