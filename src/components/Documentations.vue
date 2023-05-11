@@ -69,9 +69,16 @@
     </div>
     </div>
     </header>
+ 
     <div id="content" class="site-content">
+       
     <div class="ast-container">
-        <div class="editor">
+    <form class="form-horizontal form-simple" action="" style="margin-top:50px;">
+        <button  class="btn blue-bg btn-lg btn-block"  @click="toggleEditor()">
+            Open Editor
+         </button>
+      </form>
+        <div v-if="editor" class="editor">
          <vue-editor :editorOptions="editorSettings" useCustomImageHandler @image-added="imageHandler" />
         </div>
     </div> 
@@ -122,7 +129,21 @@
 
 
 export default {
- 
+ data(){
+    return{
+        editor: null,
+        mobileNav: null,
+          
+    }
+ },
+ methods: {
+    toggleEditor(){
+        this.editor = !this.editor;
+    },
+    toggleMobileNav(){
+            this.mobileNav= !this.mobileNav
+        },
+ }
  
  
 }
@@ -130,7 +151,7 @@ export default {
 <style scoped>
  .editor {
     height:60vh;
-    margin-top:70px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     background-color: #fff;
@@ -142,4 +163,7 @@ export default {
     flex-direction: column;
     height: 100%;
   }
+ 
+  @media (max-width: 799px) {
+}
 </style>
