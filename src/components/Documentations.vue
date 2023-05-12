@@ -20,7 +20,7 @@
     <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="../#services" class="menu-link">Services</a></li>
     <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="../#portfolio" class="menu-link">Portfolio</a></li>
     <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="../#colophon" class="menu-link">Contact</a></li>
-    <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link  to="/documentations" class="menu-link">Easy Web Development</router-link></li>
+    <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link  to="/documentations" class="menu-link">Documentations</router-link></li>
     <li v-if="user" id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link to="/settings" class="menu-link">Settings</router-link></li>
     
   </ul></div></nav></div></div> </div>
@@ -63,7 +63,7 @@
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="../#services" class="menu-link">Services</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="../#portfolio" class="menu-link">Portfolio</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="../#colophon" class="menu-link">Contact</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link  to="/documentations" class="menu-link">Easy Web Development</router-link></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link  to="/documentations" class="menu-link">Documentations</router-link></li>
     <li v-if="user" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link to="/settings" class="menu-link">Settings</router-link></li>  
   </ul></div></nav></div></div> </div>
     </div>
@@ -73,14 +73,15 @@
     <div id="content" class="site-content">
        
     <div class="ast-container">
-    <form class="form-horizontal form-simple" action="" style="margin-top:50px;">
-        <button  class="btn blue-bg btn-lg btn-block"  @click="toggleEditor()">
+    <form  v-if="user" class="form-horizontal form-simple" action="">
+        <button  class="btn blue-bg btn-lg btn-block"  @click.prevent="toggleEditor()">
             Open Editor
          </button>
-      </form>
-        <div v-if="editor" class="editor">
+         <div v-if="editor" class="editor">
          <vue-editor :editorOptions="editorSettings" useCustomImageHandler @image-added="imageHandler" />
         </div>
+      </form>
+    
     </div> 
     </div>
     <footer class="site-footer" id="colophon" itemtype="https://schema.org/WPFooter" itemscope="itemscope" itemid="#colophon">
@@ -143,6 +144,11 @@ export default {
     toggleMobileNav(){
             this.mobileNav= !this.mobileNav
         },
+ },
+ computed: {
+  user() {
+          return this.$store.state.user.loggedIn;
+     },
  }
  
  
@@ -151,19 +157,61 @@ export default {
 <style scoped>
  .editor {
     height:60vh;
-    margin-top: 20px;
     display: flex;
     justify-content: center;
     background-color: #fff;
     width:100%;
+  }
+  header{
+    position:fixed;
+    margin-top: 0;
   }
   .quillWrapper {
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
+    width:90%;
+  }
+  .hfeed{
+    background-color: #fff;
+  }
+  .hfeed .site-content .ast-container form{
+  margin-top:80px;
+  display: flex;
+   align-content: center;
+    flex-direction: column;
+    width: 100%
+ }
+ button{
+  background-color: rgb(65, 142, 230);
+  width: 90%;
+  align-self: center;
+ }
+  @media (max-width: 799px) {
+    .hfeed .site-content{
+  margin-top:40px;
+  display: flex;
+   align-content: center;
+    flex-direction: column;
+    width: 100%
+ }
+ .hfeed header{
+  margin-top:0;
+ }
+ button{
+  background-color: rgb(65, 142, 230);
+  width: fit-content;
+ 
+ }
+ 
+ .editor {
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    width:100%;
   }
  
-  @media (max-width: 799px) {
 }
 </style>
