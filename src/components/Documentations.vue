@@ -74,7 +74,7 @@
        
     <div class="ast-container">
     <form  class="form-horizontal form-simple" action="">
-        <button  class="btn blue-bg btn-lg btn-block"  @click.prevent="toggleEditor()">
+        <button v-if="user" class="btn blue-bg btn-lg btn-block"  @click.prevent="toggleEditor()">
           <span v-if="editor"> close </span><span v-if="!editor"> Open </span>Editor
          </button>
          <div v-if="editor" class="editor">
@@ -93,29 +93,12 @@
       <div class="sidebar" >
         <div  @click="toggleSidebar()" class="sidebar-brand">
             <h5 style="font-weight:400px">Full-Stack Web Developer Guide</h5>
-            <span>From Zero to Hero Very Fast</span>
+            <span>From Zero to Hero Very Fast  <span v-if="sidebar" style="  background-color:rgb(50, 129, 247); color: #fff; border-radius:5px; text-align: center;">close</span></span>
+           
         </div>
         <div v-if="sidebar" @click="toggleSidebar()" class="sidebar-menu" style="height: 777px; overflow: auto;">
+         
             <ul>
-                <li>
-                    <router-link to="/settings">
-                    
-                    Edit Profile
-                    </router-link>
-                </li>
-                <li>
-                    <router-link to="/">
-                        
-                    Home
-                    </router-link>
-                </li>
-              
-                <li>
-                    <router-link to="/skills">
-                       
-                    Add Skill
-                    </router-link>
-                </li>
                 <li>
                     <router-link to="/experience">
                         
@@ -232,8 +215,8 @@
     <div class="ast-builder-footer-grid-columns site-primary-footer-inner-wrap ast-builder-grid-row">
     <div class="site-footer-primary-section-1 site-footer-section site-footer-section-1">
     <aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-2" aria-label="Footer Widget 2">
-    <section id="custom_html-3" class="widget_text widget widget_custom_html"><h2 class="widget-title">Thanks to the Internet, Proud of working for you remotely .</h2><div class="textwidget custom-html-widget"><h1><a href="https://wa.me/254794711950"><span style="text-decoration: underline">Get in touch</span></a>
-    </h1></div></section> </aside>
+    <section id="custom_html-3" class="widget_text widget widget_custom_html"><h2 class="widget-title">Thanks to the Internet, Proud of working with you remotely .</h2><div class="textwidget custom-html-widget"><h3><a href="https://wa.me/254794711950"><span style="text-decoration: underline">Whatsapp Me</span></a>
+    </h3></div></section> </aside>
     </div>
     <div class="site-footer-primary-section-2 site-footer-section site-footer-section-2">
     </div>
@@ -276,7 +259,7 @@ export default {
     return{
         editor: null,
         mobileNav: null,
-          sidebar: null,
+          sidebar: true,
     }
  },
  methods: {
@@ -385,7 +368,7 @@ export default {
     box-sizing: border-box;
     list-style-type:none;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    
 }
 .scrollable-div {
     height: 500px; /* Set the height of the div */
@@ -409,12 +392,13 @@ export default {
 .sidebar-brand span {
     display: inline-block;
     padding-right: 1rem;
+   
 }
 .sidebar-menu {
   width: 300px;
     position: fixed;
     left: 0;
-    top: 80px;
+    top: 100px;
     background-color: #fff;
     z-index: 999;
     transition: margin-left 300ms;
