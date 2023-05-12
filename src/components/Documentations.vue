@@ -9,8 +9,8 @@
     <div class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
     <div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
     <div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline">
-    <div class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope">
-    <h3 class="site-logo-img"><router-link to="/log-in" >/MF Musunza Festus</router-link></h3> </div>
+    <!-- <div class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope">
+    <h3 class="site-logo-img"><router-link to="/log-in" >/MF Musunza Festus</router-link></h3> </div> -->
     
     </div>
     </div>
@@ -38,8 +38,8 @@
     <div class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
     <div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
     <div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline">
-    <div class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope">
-    <h4 class="site-logo-img"><router-link to="/log-in" >/MF Musunza Festus</router-link></h4> </div>
+    <!-- <div class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope">
+    <h4 class="site-logo-img"><router-link to="/log-in" >/MF Musunza Festus</router-link></h4> </div> -->
     
     </div>
     </div>
@@ -73,15 +73,157 @@
     <div id="content" class="site-content">
        
     <div class="ast-container">
-    <form  v-if="user" class="form-horizontal form-simple" action="">
+    <form  class="form-horizontal form-simple" action="">
         <button  class="btn blue-bg btn-lg btn-block"  @click.prevent="toggleEditor()">
-            Open Editor
+          <span v-if="editor"> close </span><span v-if="!editor"> Open </span>Editor
          </button>
          <div v-if="editor" class="editor">
+          <input type="hidden" name="_token" >                          
+                              <fieldset class="form-group position-relative has-icon-left">
+                                <input type="text"
+                                    class="form-control form-control-lg input-lg "
+                                    placeholder="Enter Title" required>
+                              </fieldset>
          <vue-editor :editorOptions="editorSettings" useCustomImageHandler @image-added="imageHandler" />
+         <button  class="btn blue-bg btn-lg btn-block">
+            Post
+         </button>
         </div>
       </form>
-    
+      <div class="sidebar" >
+        <div  @click="toggleSidebar()" class="sidebar-brand">
+            <h5 style="font-weight:400px">Full-Stack Web Developer Guide</h5>
+            <span>From Zero to Hero Very Fast</span>
+        </div>
+        <div v-if="sidebar" @click="toggleSidebar()" class="sidebar-menu" style="height: 777px; overflow: auto;">
+            <ul>
+                <li>
+                    <router-link to="/settings">
+                    
+                    Edit Profile
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/">
+                        
+                    Home
+                    </router-link>
+                </li>
+              
+                <li>
+                    <router-link to="/skills">
+                       
+                    Add Skill
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/experience">
+                        
+                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
+                    
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/experience">
+                        
+                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
+                    
+                    </router-link>
+                </li><li>
+                    <router-link to="/experience">
+                        
+                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
+                    
+                    </router-link>
+                </li><li>
+                    <router-link to="/experience">
+                        
+                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
+                    
+                    </router-link>
+                </li><li>
+                    <router-link to="/experience">
+                        
+                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
+                    
+                    </router-link>
+                </li><li>
+                    <router-link to="/experience">
+                        
+                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
+                    
+                    </router-link>
+                </li><li>
+                    <router-link to="/experience">
+                        
+                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
+                    
+                    </router-link>
+                </li><li>
+                    <router-link to="/experience">
+                        
+                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
+                    
+                    </router-link>
+                </li><li>
+                    <router-link to="/experience">
+                        
+                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
+                    
+                    </router-link>
+                </li><li>
+                    <router-link to="/experience">
+                        
+                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
+                    
+                    </router-link>
+                </li><li>
+                    <router-link to="/experience">
+                        
+                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
+                    
+                    </router-link>
+                </li><li>
+                    <router-link to="/experience">
+                        
+                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
+                    
+                    </router-link>
+                </li><li>
+                    <router-link to="/experience">
+                        
+                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
+                    
+                    </router-link>
+                </li><li>
+                    <router-link to="/experience">
+                        
+                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
+                    
+                    </router-link>
+                </li><li>
+                    <router-link to="/experience">
+                        
+                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
+                    
+                    </router-link>
+                </li><li>
+                    <router-link to="/experience">
+                        
+                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
+                    
+                    </router-link>
+                </li><li>
+                    <router-link to="/experience">
+                        
+                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
+                    
+                    </router-link>
+                </li>
+           
+            </ul>
+        </div>
+    </div>
     </div> 
     </div>
     <footer class="site-footer" id="colophon" itemtype="https://schema.org/WPFooter" itemscope="itemscope" itemid="#colophon">
@@ -134,7 +276,7 @@ export default {
     return{
         editor: null,
         mobileNav: null,
-          
+          sidebar: null,
     }
  },
  methods: {
@@ -143,6 +285,9 @@ export default {
     },
     toggleMobileNav(){
             this.mobileNav= !this.mobileNav
+        },
+        toggleSidebar(){
+            this.sidebar= !this.sidebar
         },
  },
  computed: {
@@ -159,19 +304,30 @@ export default {
     height:60vh;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     background-color: #fff;
     width:100%;
+    padding: 10px;
   }
   header{
     position:fixed;
     margin-top: 0;
+  }
+  input{
+    width:80%;
+    text-align:center;
+    padding: 10px;
+    margin-left: 150px;
   }
   .quillWrapper {
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
-    width:90%;
+   align-content: center;
+   width:80%;
+    padding: 10px;
+    margin-left: 150px;
   }
   .hfeed{
     background-color: #fff;
@@ -185,8 +341,9 @@ export default {
  }
  button{
   background-color: rgb(65, 142, 230);
-  width: 90%;
+  width: 200px;
   align-self: center;
+  border: 10px;
  }
   @media (max-width: 799px) {
     .hfeed .site-content{
@@ -205,13 +362,100 @@ export default {
  
  }
  
- .editor {
-    height:100vh;
-    display: flex;
-    justify-content: center;
-    background-color: #fff;
+ input{
+  
+    margin-left: 0px;
     width:100%;
   }
- 
+  .quillWrapper {
+  width:100%;
+    margin-left: 0px;
+  }
+  
 }
+
+:root {
+    --main-color:#fff;
+    --color-dark:#02060b;
+    --text-grey:#999999;
+}
+* {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type:none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+.scrollable-div {
+    height: 500px; /* Set the height of the div */
+    overflow: auto; /* Make it scrollable */
+  }
+.sidebar{
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-brand{
+  width: 300px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: fit-content;
+    background-color: #fff;
+    z-index: 999;
+    transition: margin-left 300ms;
+    padding:1rem 0rem 1rem 2rem; 
+}
+.sidebar-brand span {
+    display: inline-block;
+    padding-right: 1rem;
+}
+.sidebar-menu {
+  width: 300px;
+    position: fixed;
+    left: 0;
+    top: 80px;
+    background-color: #fff;
+    z-index: 999;
+    transition: margin-left 300ms;
+    margin-top: 1rem;
+    height: fit-content;
+}
+.sidebar-menu li {
+    width: 100%;
+    margin-bottom: 1.3rem;
+    padding-left: 2rem;
+   
+}
+.sidebar-menu li .available{
+    margin-left:3rem ;
+}
+.sidebar-menu li .available a span{
+    margin-left: 3.1rem;
+    background: #79aae6;
+    border-radius: 50%;
+    padding-left: .5rem;
+    font-size: 1.5rem;
+}
+a .li-span{
+    margin-left: 0rem;
+    background: #79aae6;
+    border-radius: 50%;
+ 
+    padding-left:.5rem;
+}
+.sidebar-menu a {
+    display: block;
+    color: #02060b;
+    padding-bottom: 1rem;
+}
+.sidebar-menu a.active {
+    color: #1c68c4;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+} 
+.sidebar-menu a span:first-child {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+} 
 </style>
