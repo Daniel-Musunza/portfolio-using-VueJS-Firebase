@@ -400,8 +400,8 @@
     <div class="ast-builder-footer-grid-columns site-primary-footer-inner-wrap ast-builder-grid-row">
     <div class="site-footer-primary-section-1 site-footer-section site-footer-section-1">
     <aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-2" aria-label="Footer Widget 2">
-    <section id="custom_html-3" class="widget_text widget widget_custom_html"><h2 class="widget-title">Thanks to the Internet, Proud of working for you remotely .</h2><div class="textwidget custom-html-widget"><h1><a href="https://wa.me/254794711950"><span style="text-decoration: underline">Get in touch</span></a>
-    </h1></div></section> </aside>
+    <section id="custom_html-3" class="widget_text widget widget_custom_html"><h2 class="widget-title">Thanks to the Internet, Proud of working for you remotely .</h2><div class="textwidget custom-html-widget"><h3><a href="https://wa.me/254794711950"><span style="text-decoration: underline">Whatsapp Me</span></a>
+    </h3></div></section> </aside>
     </div>
     <div class="site-footer-primary-section-2 site-footer-section site-footer-section-2">
     </div>

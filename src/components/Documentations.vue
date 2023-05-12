@@ -32,42 +32,7 @@
     <div class="ast-desktop-header-content content-align-flex-start ">
     </div>
     </div> 
-    <div id="ast-mobile-header" class="ast-mobile-header-wrap " data-type="dropdown">
-    <div class="ast-main-header-wrap main-header-bar-wrap">
-    <div class="ast-primary-header-bar ast-primary-header main-header-bar site-primary-header-wrap site-header-focus-item ast-builder-grid-row-layout-default ast-builder-grid-row-tablet-layout-default ast-builder-grid-row-mobile-layout-default" data-section="section-primary-header-builder">
-    <div class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
-    <div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
-    <div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline">
-    <!-- <div class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope">
-    <h4 class="site-logo-img"><router-link to="/log-in" >/MF Musunza Festus</router-link></h4> </div> -->
-    
-    </div>
-    </div>
-    <div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
-    <div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="section-header-mobile-trigger">
-    <div class="ast-button-wrap">
-    <button type="button" @click="toggleMobileNav()" class="menu-toggle main-header-menu-toggle ast-mobile-menu-trigger-minimal" aria-expanded="false">
-    <span class="screen-reader-text">Main Menu</span>
-    <span class="mobile-menu-toggle-icon">
-    <span class="ahfb-svg-iconset ast-inline-flex svg-baseline"><svg class='ast-mobile-svg ast-menu-svg' fill='currentColor' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M3 13h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 7h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 19h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1z'></path></svg></span><span class="ahfb-svg-iconset ast-inline-flex svg-baseline"><svg class='ast-mobile-svg ast-close-svg' fill='currentColor' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M5.293 6.707l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.293-5.293 5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z'></path></svg></span> </span>
-    </button>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="ast-mobile-header-content content-align-flex-start " v-if="mobileNav">
-    <div class="ast-builder-menu-mobile ast-builder-menu ast-builder-menu-mobile-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-header-mobile-menu">
-    <div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="ast-mobile-site-navigation" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation"><ul id="ast-hf-mobile-menu" class="main-header-menu ast-nav-menu ast-flex  submenu-with-border astra-menu-animation-fade  stack-on-mobile"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-22"><a href="#" aria-current="page" class="menu-link">Home</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="../#services" class="menu-link">Services</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="../#portfolio" class="menu-link">Portfolio</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="../#colophon" class="menu-link">Contact</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link  to="/documentations" class="menu-link">Documentations</router-link></li>
-    <li v-if="user" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link to="/settings" class="menu-link">Settings</router-link></li>  
-  </ul></div></nav></div></div> </div>
-    </div>
-    </div>
+ 
     </header>
  
     <div id="content" class="site-content">
@@ -85,16 +50,32 @@
                                     placeholder="Enter Title" required>
                               </fieldset>
          <vue-editor :editorOptions="editorSettings" useCustomImageHandler @image-added="imageHandler" />
-         <button  class="btn blue-bg btn-lg btn-block">
+       
+        </div>
+        <button  v-if="editor" class="btn blue-bg btn-lg btn-block">
             Post
          </button>
-        </div>
       </form>
       <div class="sidebar" >
-        <div  @click="toggleSidebar()" class="sidebar-brand">
+        <div class="sidebar-brand">
             <h5 style="font-weight:400px">Full-Stack Web Developer Guide</h5>
-            <span>From Zero to Hero Very Fast  <span v-if="sidebar" style="  background-color:rgb(50, 129, 247); color: #fff; border-radius:5px; text-align: center;">close</span></span>
-           
+            <span  @click="toggleSidebar()" >From Zero to Hero Very Fast  <span v-if="sidebar" style="  background-color:rgb(50, 129, 247); color: #fff; border-radius:5px; text-align: center;">close</span> <span v-if="!sidebar" style="  background-color:rgb(50, 129, 247); color: #fff; border-radius:5px; padding-left: 13px; text-align: center;">List of all topics</span></span>
+     
+        </div>
+        <div class="sidebar-left">
+          <button type="button" @click="toggleMobileNav()">
+            <i class="fa-solid fa-bars" style="font-size: 30px; color: #fff; padding: 5px; background: rgb(30, 129, 222); "></i>
+          </button>
+        </div>
+        <div class="ast-mobile-header-content content-align-flex-start " v-if="mobileNav">
+          <div class="ast-builder-menu-mobile ast-builder-menu ast-builder-menu-mobile-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-header-mobile-menu">
+          <div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="ast-mobile-site-navigation" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation"><ul id="ast-hf-mobile-menu" class="main-header-menu ast-nav-menu ast-flex  submenu-with-border astra-menu-animation-fade  stack-on-mobile"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-22"><a href="#" aria-current="page" class="menu-link">Home</a></li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="../#services" class="menu-link">Services</a></li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="../#portfolio" class="menu-link">Portfolio</a></li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="../#colophon" class="menu-link">Contact</a></li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link  to="/documentations" class="menu-link">Documentations</router-link></li>
+          <li v-if="user" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link to="/settings" class="menu-link">Settings</router-link></li>  
+        </ul></div></nav></div></div> </div>
         </div>
         <div v-if="sidebar" @click="toggleSidebar()" class="sidebar-menu" style="height: 777px; overflow: auto;">
          
@@ -259,7 +240,7 @@ export default {
     return{
         editor: null,
         mobileNav: null,
-          sidebar: true,
+          sidebar: null,
     }
  },
  methods: {
@@ -312,6 +293,9 @@ export default {
     padding: 10px;
     margin-left: 150px;
   }
+  .site-content{
+    min-height:500px;
+  }
   .hfeed{
     background-color: #fff;
   }
@@ -327,6 +311,11 @@ export default {
   width: 200px;
   align-self: center;
   border: 10px;
+ }
+ @media (min-width: 799px) {
+  .sidebar-left{
+  display: none;
+  }
  }
   @media (max-width: 799px) {
     .hfeed .site-content{
@@ -354,6 +343,17 @@ export default {
   width:100%;
     margin-left: 0px;
   }
+  .sidebar-left{
+  width: fit-content;
+    position: fixed;
+    right: 10px;
+    top: 0;
+    height: fit-content;
+    background-color: #fff;
+    z-index: 999;
+    transition: margin-left 300ms;
+    padding:1rem 0rem 1rem 2rem; 
+}
   
 }
 
@@ -389,6 +389,7 @@ export default {
     transition: margin-left 300ms;
     padding:1rem 0rem 1rem 2rem; 
 }
+
 .sidebar-brand span {
     display: inline-block;
     padding-right: 1rem;
