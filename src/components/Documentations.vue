@@ -60,7 +60,7 @@
           <li v-if="user" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link to="/settings" class="menu-link">Settings</router-link></li>  
         </ul></div></nav></div></div> </div>
         </div>
-        <div v-if="sidebar" @click="toggleSidebar()" class="sidebar-menu" >
+        <div class="sidebar-men" >
          
             <ul  >
                 <li    v-for="(topic, index) in full_stack_guide"
@@ -72,7 +72,7 @@
                 </li>
             </ul>
         </div>
-        <div v-if="sidebar" @click="toggleSidebar()" class="sidebar-men" >
+        <div  @click="toggleSidebar()" class="sidebar-menu" >
          
          <ul  >
              <li    v-for="(topic, index) in full_stack_guide"
@@ -87,7 +87,7 @@
     </div>
    <div class="form">
     <form  class="form-horizontal form-simple" action="">
-        <button class="btn blue-bg btn-lg btn-block"  @click.prevent="toggleEditor()">
+        <button v-if="user" class="btn blue-bg btn-lg btn-block"  @click.prevent="toggleEditor()">
           <span v-if="editor"> close </span><span v-if="!editor"> Open </span>Editor
          </button>
          <div v-if="editor" class="editor">
@@ -391,7 +391,7 @@ width:330px;
   .sidebar-left{
   width: fit-content;
     position: fixed;
-    right: 10px;
+    right: 20px;
     top: 0;
     height: fit-content;
     background-color: #fff;
@@ -399,7 +399,9 @@ width:330px;
     transition: margin-left 300ms;
     padding:1rem 0rem 1rem 2rem; 
 }
-  
+  .sidebar-menu{
+    display: none;
+  }
 }
 
 :root {
@@ -441,9 +443,6 @@ width:330px;
    
 }
 .sidebar-menu {
-  display:none;
-}
-.sidebar-men {
   width: 300px;
     position: fixed;
     left: 0;
@@ -452,6 +451,48 @@ width:330px;
     z-index: 999;
     transition: margin-left 300ms;
     margin-top: 1rem;
+    height: fit-content;
+}
+.sidebar-menu li {
+    width: 100%;
+    margin-bottom: 1.3rem;
+    padding-left: 2rem;
+   
+}
+.sidebar-menu li .available{
+    margin-left:3rem ;
+}
+.sidebar-menu li .available a span{
+    margin-left: 3.1rem;
+    background: #79aae6;
+    border-radius: 50%;
+    padding-left: .5rem;
+    font-size: 1.5rem;
+}
+
+.sidebar-menu a {
+    display: block;
+    color: #02060b;
+    padding-bottom: 1rem;
+}
+.sidebar-menu a.active {
+    color: #1c68c4;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+} 
+.sidebar-menu a span:first-child {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+} 
+.sidebar-men {
+  width: 300px;
+    position: fixed;
+    left: 0;
+    top: 110px;
+    background-color: #fff;
+    z-index: 999;
+    transition: margin-left 300ms;
+    margin-top: 0px;
     height: fit-content;
 }
 .sidebar-men li {
