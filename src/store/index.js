@@ -40,7 +40,10 @@ export default createStore({
             designs: [],
             designPhotoName: "",
             designPhotoFileURL: true,
-            
+
+            full_stack_guide: [],
+            title: "",
+            content: true,
     }
   },
   getters: {
@@ -49,6 +52,7 @@ experience: state => state.experience,
 skills: state => state.skills,
 websites: state => state.websites,
 designs: state => state.designs,
+full_stack_guide: state => state.full_stack_guide,
 
 user(state){
   return state.user
@@ -108,6 +112,10 @@ fullName(state) {
         },
         setWebsitesState(state, payload) {
           state.websites= payload;
+          
+        },
+        setGuideState(state, payload) {
+          state.full_stack_guide= payload;
           
         },
         webFileNameChange(state, payload) {
@@ -268,5 +276,12 @@ async signOut({  state}) {
           await getPost.delete();
           commit('filterDesigns', payload)
       },
+      async getGuide({ commit }) {
+
+        const querySnapshot = await getDocs(collection(db, "full_stack_guide"));
+        const data = querySnapshot.docs.map((doc) => doc.data());
+        commit('setGuideState', data);
+      },
+   
       }
 })

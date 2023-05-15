@@ -20,7 +20,7 @@
     <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="../#services" class="menu-link">Services</a></li>
     <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="../#portfolio" class="menu-link">Portfolio</a></li>
     <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="../#colophon" class="menu-link">Contact</a></li>
-    <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link  to="/documentations" class="menu-link">Documentations</router-link></li>
+    <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18">  <router-link :to="{ name: 'Documentations', params: {id:  this.id}}" class="menu-link">Documentations</router-link></li>
     <li v-if="user" id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link to="/settings" class="menu-link">Settings</router-link></li>
     
   </ul></div></nav></div></div> </div>
@@ -37,29 +37,12 @@
  
     <div id="content" class="site-content">
        
-    <div class="ast-container">
-    <form  class="form-horizontal form-simple" action="">
-        <button v-if="user" class="btn blue-bg btn-lg btn-block"  @click.prevent="toggleEditor()">
-          <span v-if="editor"> close </span><span v-if="!editor"> Open </span>Editor
-         </button>
-         <div v-if="editor" class="editor">
-          <input type="hidden" name="_token" >                          
-                              <fieldset class="form-group position-relative has-icon-left">
-                                <input type="text"
-                                    class="form-control form-control-lg input-lg "
-                                    placeholder="Enter Title" required>
-                              </fieldset>
-         <vue-editor :editorOptions="editorSettings" useCustomImageHandler @image-added="imageHandler" />
-       
-        </div>
-        <button  v-if="editor" class="btn blue-bg btn-lg btn-block">
-            Post
-         </button>
-      </form>
+    <div class="ast-container" >
+   
       <div class="sidebar" >
         <div class="sidebar-brand">
             <h5 style="font-weight:400px">Full-Stack Web Developer Guide</h5>
-            <span  @click="toggleSidebar()" >From Zero to Hero Very Fast  <span v-if="sidebar" style="  background-color:rgb(50, 129, 247); color: #fff; border-radius:5px; text-align: center;">close</span> <span v-if="!sidebar" style="  background-color:rgb(50, 129, 247); color: #fff; border-radius:5px; padding-left: 13px; text-align: center;">List of all topics</span></span>
+            <span  @click="toggleSidebar()" >From Zero to Hero Very Fast  <span v-if="sidebar" style="  background-color:rgb(50, 129, 247); color: #fff; border-radius:5px; padding-left: 13px; text-align: center;">close</span> <span v-if="!sidebar" style="  background-color:rgb(50, 129, 247); color: #fff; border-radius:5px; padding-left: 13px; text-align: center;">List of all topics</span></span>
      
         </div>
         <div class="sidebar-left">
@@ -73,121 +56,63 @@
           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="../#services" class="menu-link">Services</a></li>
           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="../#portfolio" class="menu-link">Portfolio</a></li>
           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="../#colophon" class="menu-link">Contact</a></li>
-          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link  to="/documentations" class="menu-link">Documentations</router-link></li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18">  <router-link :to="{ name: 'Documentations', params: {id:  this.id}}" class="menu-link">Documentations</router-link></li>
           <li v-if="user" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link to="/settings" class="menu-link">Settings</router-link></li>  
         </ul></div></nav></div></div> </div>
         </div>
-        <div v-if="sidebar" @click="toggleSidebar()" class="sidebar-menu" style="height: 777px; overflow: auto;">
+        <div v-if="sidebar" @click="toggleSidebar()" class="sidebar-menu" >
          
-            <ul>
-                <li>
-                    <router-link to="/experience">
-                        
-                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
-                    
-                    </router-link>
+            <ul  >
+                <li    v-for="(topic, index) in full_stack_guide"
+                :key="index">
+             <!-- <router-link :to="{ name: 'Documentations', params: {id:  topic.id}}"> -->
+                                              
+          {{ topic.title }}
+                    <!-- </router-link> -->
                 </li>
-                <li>
-                    <router-link to="/experience">
-                        
-                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
-                    
-                    </router-link>
-                </li><li>
-                    <router-link to="/experience">
-                        
-                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
-                    
-                    </router-link>
-                </li><li>
-                    <router-link to="/experience">
-                        
-                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
-                    
-                    </router-link>
-                </li><li>
-                    <router-link to="/experience">
-                        
-                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
-                    
-                    </router-link>
-                </li><li>
-                    <router-link to="/experience">
-                        
-                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
-                    
-                    </router-link>
-                </li><li>
-                    <router-link to="/experience">
-                        
-                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
-                    
-                    </router-link>
-                </li><li>
-                    <router-link to="/experience">
-                        
-                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
-                    
-                    </router-link>
-                </li><li>
-                    <router-link to="/experience">
-                        
-                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
-                    
-                    </router-link>
-                </li><li>
-                    <router-link to="/experience">
-                        
-                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
-                    
-                    </router-link>
-                </li><li>
-                    <router-link to="/experience">
-                        
-                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
-                    
-                    </router-link>
-                </li><li>
-                    <router-link to="/experience">
-                        
-                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
-                    
-                    </router-link>
-                </li><li>
-                    <router-link to="/experience">
-                        
-                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
-                    
-                    </router-link>
-                </li><li>
-                    <router-link to="/experience">
-                        
-                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
-                    
-                    </router-link>
-                </li><li>
-                    <router-link to="/experience">
-                        
-                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
-                    
-                    </router-link>
-                </li><li>
-                    <router-link to="/experience">
-                        
-                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
-                    
-                    </router-link>
-                </li><li>
-                    <router-link to="/experience">
-                        
-                      /Daniel-Musunza/portfolio-using-VueJs-Firebase.git
-                    
-                    </router-link>
-                </li>
-           
             </ul>
         </div>
+        <div v-if="sidebar" @click="toggleSidebar()" class="sidebar-men" >
+         
+         <ul  >
+             <li    v-for="(topic, index) in full_stack_guide"
+             :key="index">
+          <!-- <router-link :to="{ name: 'Documentations', params: {id:  topic.id}}"> -->
+                                           
+       {{ topic.title }}
+                 <!-- </router-link> -->
+             </li>
+         </ul>
+        </div>
     </div>
+   <div class="form">
+    <form  class="form-horizontal form-simple" action="">
+        <button class="btn blue-bg btn-lg btn-block"  @click.prevent="toggleEditor()">
+          <span v-if="editor"> close </span><span v-if="!editor"> Open </span>Editor
+         </button>
+         <div v-if="editor" class="editor">
+          <TheLoader v-show="loading" />
+          <input type="hidden" name="_token" >                          
+                              <fieldset class="form-group position-relative has-icon-left">
+                                <input type="text"
+                                v-model="title"
+                                    class="form-control form-control-lg input-lg "
+                                    placeholder="Enter Title" required>
+                                <button  v-if="editor" @click.prevent="addTopic()" class="btn blue-bg btn-lg btn-block">
+                                    Post
+                                </button>
+                              </fieldset>
+         <vue-editor :editorOptions="editorSettings" useCustomImageHandler v-model="content"  @image-added="imageHandler" />
+       
+        </div>
+     
+      </form>
+    
+      <div class="content"  v-for="(topic, index) in full_stack_guide" :key="index">
+        <h1>{{topic.title}}</h1>
+    <p v-html="topic.content"></p>
+   </div>
+</div>
     </div> 
     </div>
     <footer class="site-footer" id="colophon" itemtype="https://schema.org/WPFooter" itemscope="itemscope" itemid="#colophon">
@@ -233,14 +158,30 @@
 </template>
 
 <script>
-
-
+import TheLoader from "@/components/TheLoader";
+import Quill from "quill";
+ window.Quill = Quill;
+const ImageResize = require("quill-image-resize-module").default;
+Quill.register("modules/imageResize", ImageResize);
+import {db}  from "@/firebase";
+import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { addDoc, doc, collection} from "firebase/firestore"; 
+import { mapState, mapActions } from 'vuex';
 export default {
- data(){
+ components: {
+  TheLoader,
+ },
+  data(){
     return{
         editor: null,
+        loading: null,
         mobileNav: null,
           sidebar: null,
+          editorSettings: {
+            modules: {
+              imageResize: {},
+            },
+          },
     }
  },
  methods: {
@@ -253,17 +194,66 @@ export default {
         toggleSidebar(){
             this.sidebar= !this.sidebar
         },
+        async addTopic() {
+            if (this.title.length !== 0 && this.content.length !== 0) {
+                this.loading = true;
+                await addDoc( collection(db, "full_stack_guide"),{
+                title: this.title,
+                content: this.content,
+                });
+                await this.$store.dispatch("getGuide");
+                this.loading = false;
+                alert("guide added successfully ...");
+                return;
+            }
+            this.error = true;
+            this.errorMsg = "Please ensure all fields necessary have been filled!";
+            setTimeout(() => {
+                this.error = false;
+            }, 5000);
+            return;
+        },
+        ...mapActions(['getGuide']),
+        imageHandler(file, Editor, cursorLocation, resetUploader) {
+        const storage = getStorage();
+        const storageRef = ref(storage, `documents/guideImages/${file.name}`);
+        const uploadTask = uploadBytesResumable(storageRef, file);
+
+        uploadTask.on(
+          "state_changed",
+          (snapshot) => {
+            console.log(snapshot);
+          },
+          (err) => {
+            console.log(err);
+          },
+          async () => {
+            const downloadURL = await getDownloadURL(storageRef);
+            Editor.insertEmbed(cursorLocation, "image", downloadURL);
+            resetUploader();
+          }
+        );
+      }
  },
  computed: {
+  ...mapState(['full_stack_guide']),
   user() {
           return this.$store.state.user.loggedIn;
      },
- }
+     topic () {
+      const id = this.$route.params.id||"GM1sM0ivOEOTMk2Efg8Q";
+      return this.topic = this.full_stack_guide.find(topic => topic.id === id);
+    },
+  },
+ created() {
+    this.getGuide();
+  }
  
  
 }
 </script>
 <style scoped>
+
  .editor {
     height:60vh;
     display: flex;
@@ -277,19 +267,38 @@ export default {
     position:fixed;
     margin-top: 0;
   }
-  input{
+  fieldset{
     width:80%;
+    display:flex;
+    flex-direction: row;
+    margin-left: 160px;
+  }
+  input{
     text-align:center;
     padding: 10px;
-    margin-left: 150px;
+    width:80%;
   }
+  fieldset button{
+  background-color: rgb(65, 142, 230);
+  width: 150px;
+  align-self: center;
+  border: 10px;
+  padding:15px;
+  margin-left: 10px;
+ }
+  button{
+  background-color: rgb(65, 142, 230);
+  width: 200px;
+  align-self: center;
+  border: 10px;
+ }
   .quillWrapper {
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
-   align-content: center;
-   width:80%;
+    align-content: center;
+    width:80%;
     padding: 10px;
     margin-left: 150px;
   }
@@ -299,25 +308,52 @@ export default {
   .hfeed{
     background-color: #fff;
   }
-  .hfeed .site-content .ast-container form{
-  margin-top:80px;
+  .hfeed .site-content .ast-container .form{
+  margin:110px;
   display: flex;
-   align-content: center;
+   justify-content: center;
+    flex-direction: column;
+    width: 80%
+ }
+ .hfeed .site-content .ast-container .form form{
+ 
+  display: flex;
+   align-items: center;
     flex-direction: column;
     width: 100%
  }
- button{
-  background-color: rgb(65, 142, 230);
-  width: 200px;
-  align-self: center;
-  border: 10px;
- }
+ .hfeed .site-content .ast-container .form .content{
+ 
+ display: flex;
+   flex-direction: column;
+   max-width: 500px;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-left: 260px;
+}
+p{
+  color: #000;
+  max-width: 1000px;
+}
+
  @media (min-width: 799px) {
-  .sidebar-left{
+ .sidebar-men,
+   .sidebar-left{
   display: none;
   }
  }
   @media (max-width: 799px) {
+    .hfeed .site-content .ast-container .form .content{
+    margin: 0;
+width:300px;
+  }
+  .hfeed .site-content .ast-container .form .content{
+    margin-left: 4px;
+  }
+  p{
+    margin-left:0;
+   width:100%;
+  }
     .hfeed .site-content{
   margin-top:40px;
   display: flex;
@@ -396,26 +432,29 @@ export default {
    
 }
 .sidebar-menu {
+  display:none;
+}
+.sidebar-men {
   width: 300px;
     position: fixed;
     left: 0;
-    top: 100px;
+    top: 110px;
     background-color: #fff;
     z-index: 999;
     transition: margin-left 300ms;
     margin-top: 1rem;
     height: fit-content;
 }
-.sidebar-menu li {
+.sidebar-men li {
     width: 100%;
     margin-bottom: 1.3rem;
     padding-left: 2rem;
    
 }
-.sidebar-menu li .available{
+.sidebar-men li .available{
     margin-left:3rem ;
 }
-.sidebar-menu li .available a span{
+.sidebar-men li .available a span{
     margin-left: 3.1rem;
     background: #79aae6;
     border-radius: 50%;
@@ -429,17 +468,17 @@ a .li-span{
  
     padding-left:.5rem;
 }
-.sidebar-menu a {
+.sidebar-men a {
     display: block;
     color: #02060b;
     padding-bottom: 1rem;
 }
-.sidebar-menu a.active {
+.sidebar-men a.active {
     color: #1c68c4;
     padding-top: 1rem;
     padding-bottom: 1rem;
 } 
-.sidebar-menu a span:first-child {
+.sidebar-men a span:first-child {
     font-size: 1.5rem;
     padding-right: 1rem;
 } 

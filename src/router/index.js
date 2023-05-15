@@ -58,7 +58,7 @@ requiresAuth: true,
     name: 'Documentations',
     component: Documentations,
     meta: {
-    title: "Easy Development",
+    title: "Documentations",
     requiresAuth: false,
     }
     },
