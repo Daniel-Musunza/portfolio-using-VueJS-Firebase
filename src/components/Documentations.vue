@@ -343,15 +343,24 @@ p{
   }
  }
   @media (max-width: 799px) {
+    .hfeed .site-content .ast-container .form {
+      margin-left: 20px;
+    }
     .hfeed .site-content .ast-container .form .content{
-    margin: 0;
-width:300px;
+    margin: 4px;
+    width:340px;
   }
   .hfeed .site-content .ast-container .form .content{
-    margin-left: 4px;
+    margin: 4px;
+  }
+  .sidebar{
+background: #fff;
+  }
+  .sidebar-brand{
+width:330px;
   }
   p{
-    margin-left:0;
+    margin:0;
    width:100%;
   }
     .hfeed .site-content{
