@@ -543,17 +543,7 @@ width:330px;
     padding-right: 1rem;
    
 }
-.sidebar-menu {
-  width: 300px;
-    position: fixed;
-    left: 0;
-    top: 110px;
-    background-color: #fff;
-    z-index: 999;
-    transition: margin-left 300ms;
-    margin-top: 1rem;
-    height: fit-content;
-}
+
 .sidebar-menu li {
     width: 100%;
     margin-bottom: 1.3rem;
