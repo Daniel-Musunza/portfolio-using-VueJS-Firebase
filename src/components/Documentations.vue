@@ -544,15 +544,6 @@ width:330px;
    
 }
 
-.sidebar-menu li {
-    width: 100%;
-    margin-bottom: 1.3rem;
-    padding-left: 2rem;
-   
-}
-.sidebar-menu li .available{
-    margin-left:3rem ;
-}
 .sidebar-menu li .available a span{
     margin-left: 3.1rem;
     background: #79aae6;
