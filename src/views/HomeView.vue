@@ -163,52 +163,53 @@
     </div>
     <section class="elementor-section elementor-inner-section elementor-element elementor-element-1f0145f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1f0145f" data-element_type="section">
     <div class="elementor-container elementor-column-gap-no">
-    <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-cba12c4" data-id="cba12c4" data-element_type="column">
-    <div class="elementor-widget-wrap elementor-element-populated">
-    <div class="elementor-element elementor-element-84f0d2b elementor-position-left elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="84f0d2b" data-element_type="widget" data-widget_type="icon-box.default">
-    <div class="elementor-widget-container">
-    <div class="elementor-icon-box-wrapper">
-    <div class="elementor-icon-box-icon">
-    <span class="elementor-icon elementor-animation-">
-    <i aria-hidden="true" class="fas fa-pencil-ruler"></i> </span>
-    </div>
-    <div class="elementor-icon-box-content">
-    <h4 class="elementor-icon-box-title">
-    <span>
-    UI/UX Design </span>
-    </h4>
-    <p class="elementor-icon-box-description">
-    An effective UI/UX is what captures attention and spreads a clear message. I make sure the design is innovative and neat with all of this.
-    </p>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-38531b1" data-id="38531b1" data-element_type="column">
-    <div class="elementor-widget-wrap elementor-element-populated">
-    <div class="elementor-element elementor-element-c621ccf elementor-position-left elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="c621ccf" data-element_type="widget" data-widget_type="icon-box.default">
-    <div class="elementor-widget-container">
-    <div class="elementor-icon-box-wrapper">
-    <div class="elementor-icon-box-icon">
-    <span class="elementor-icon elementor-animation-">
-    <i aria-hidden="true" class="fas fa-laptop-code"></i> </span>
-    </div>
-    <div class="elementor-icon-box-content">
-    <h4 class="elementor-icon-box-title">
-    <span>
-    Web Development </span>
-    </h4>
-    <p class="elementor-icon-box-description">
-    If you are looking for a developer who’ll take over the research and development of your website, I am a well-established professional to help you with this.
-    </p>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
+      <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-38531b1" data-id="38531b1" data-element_type="column">
+          <div class="elementor-widget-wrap elementor-element-populated">
+          <div class="elementor-element elementor-element-c621ccf elementor-position-left elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="c621ccf" data-element_type="widget" data-widget_type="icon-box.default">
+          <div class="elementor-widget-container">
+          <div class="elementor-icon-box-wrapper">
+          <div class="elementor-icon-box-icon">
+          <span class="elementor-icon elementor-animation-">
+          <i aria-hidden="true" class="fas fa-laptop-code"></i> </span>
+          </div>
+          <div class="elementor-icon-box-content">
+          <h4 class="elementor-icon-box-title">
+          <span>
+          Web Development </span>
+          </h4>
+          <p class="elementor-icon-box-description">
+          If you are looking for a developer who’ll take over the research and development of your website, I am a well-established professional to help you with this.
+          </p>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+      </div>
+      <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-cba12c4" data-id="cba12c4" data-element_type="column">
+          <div class="elementor-widget-wrap elementor-element-populated">
+          <div class="elementor-element elementor-element-84f0d2b elementor-position-left elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="84f0d2b" data-element_type="widget" data-widget_type="icon-box.default">
+          <div class="elementor-widget-container">
+          <div class="elementor-icon-box-wrapper">
+          <div class="elementor-icon-box-icon">
+          <span class="elementor-icon elementor-animation-">
+          <i aria-hidden="true" class="fas fa-pencil-ruler"></i> </span>
+          </div>
+          <div class="elementor-icon-box-content">
+          <h4 class="elementor-icon-box-title">
+          <span>
+          UI/UX Design </span>
+          </h4>
+          <p class="elementor-icon-box-description">
+          An effective UI/UX is what captures attention and spreads a clear message. I make sure the design is innovative and neat with all of this.
+          </p>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+     </div>
+   
     <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-67bbcc7" data-id="67bbcc7" data-element_type="column">
     <div class="elementor-widget-wrap elementor-element-populated">
     <div class="elementor-element elementor-element-c248822 elementor-position-left elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="c248822" data-element_type="widget" data-widget_type="icon-box.default">
