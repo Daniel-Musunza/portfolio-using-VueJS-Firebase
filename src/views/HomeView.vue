@@ -20,7 +20,7 @@
     <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="#services" class="menu-link">Services</a></li>
     <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="#portfolio" class="menu-link">Portfolio</a></li>
     <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="#colophon" class="menu-link">Contact</a></li>
-    <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18">  <router-link :to="{ name: 'Documentations'}" class="menu-link">Documentations</router-link></li>
+    <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18">  <router-link :to="{ name: 'Articles'}" class="menu-link">Articles</router-link></li>
     <li v-if="user" id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link to="/settings" class="menu-link">Settings</router-link></li>
     
   </ul></div></nav></div></div> </div>
@@ -63,7 +63,7 @@
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="#services" class="menu-link">Services</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="#portfolio" class="menu-link">Portfolio</a></li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="#colophon" class="menu-link">Contact</a></li>
-    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link :to="{ name: 'Documentations'}" class="menu-link">Documentations</router-link></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link :to="{ name: 'Articles'}" class="menu-link">Articles</router-link></li>
     <li v-if="user" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link to="/settings" class="menu-link">Settings</router-link></li>  
   </ul></div></nav></div></div> </div>
     </div>

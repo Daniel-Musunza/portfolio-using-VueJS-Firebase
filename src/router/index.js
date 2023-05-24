@@ -6,7 +6,7 @@ import HomeView from '../views/HomeView.vue'
 import Register from '../components/core/Register.vue'
 import ForgotPassword from '../components/core/ForgotPassword.vue'
 import Settings from '../components/Settings.vue'
-import Documentations from '../components/Documentations.vue'
+import Articles from '../components/Articles.vue'
 import AddSkill from '../components/AddSkill.vue'
 import AddExperience from '../components/AddExperience.vue'
 import AddWebsite from '../components/AddWebsite.vue'
@@ -54,11 +54,11 @@ requiresAuth: true,
 }
 },
 {
-    path: '/documentations',
-    name: 'Documentations',
-    component: Documentations,
+    path: '/articles',
+    name: 'Articles',
+    component: Articles,
     meta: {
-    title: "Documentations",
+    title: "Musunza Articles",
     requiresAuth: false,
     }
     },

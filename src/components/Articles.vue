@@ -5,12 +5,13 @@
             <div class="open"  @click="toggleOpenMenu">
               
                 <h5 style="font-weight:400px; font-size: 20px;">Topics <i class="fa-solid fa-chevron-down"></i></h5>
-              <!-- <span  >From Zero to Hero Very Fast  <span v-if="sidebar" style="  background-color:rgb(50, 129, 247); color: #fff; border-radius:5px; padding-left: 13px; text-align: center;">close</span> <span v-if="!sidebar" style="  background-color:rgb(50, 129, 247); color: #fff; border-radius:5px; padding-left: 13px; text-align: center;">List of all topics</span></span> -->
       
              </div>
             <div v-if="openMenu" @click="toggleOpenMenu" class="open-menu">
                
                 <ul  >
+                  <h5 style="font-weight:400px; font-size: 20px;">Full-stack Developer Guide </h5>
+                  <span  style="font-weight:400px; font-size: medium;">From Zero to Hero Very Fast </span>
                     <li    v-for="(topic, index) in full_stack_guide"
                     :key="index">
                 <!-- <router-link :to="{ name: 'Documentations', params: {id:  topic.id}}"> -->
@@ -20,11 +21,25 @@
                     </li>
                 </ul>
             </div>
-            <nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="primary-site-navigation" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation ast-inline-flex"><ul id="ast-hf-menu-1" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border ast-menu-hover-style-overline  stack-on-mobile"><li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-22"><a href="/" aria-current="page" class="menu-link">Home</a></li>
-              <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="#services" class="menu-link">Services</a></li>
-              <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="#portfolio" class="menu-link">Portfolio</a></li>
+            <div class="sidebar-menu">
+               
+               <ul  >
+                 <h5 style="font-weight:400px; font-size: 20px;">Full-stack Developer Guide </h5>
+                 <span  style="font-weight:400px; font-size: medium;">From Zero to Hero Very Fast </span>
+                   <li    v-for="(topic, index) in full_stack_guide"
+                   :key="index">
+               <!-- <router-link :to="{ name: 'Documentations', params: {id:  topic.id}}"> -->
+                                                 
+             {{ topic.title }}
+                       <!-- </router-link> -->
+                   </li>
+               </ul>
+           </div>
+            <nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="primary-site-navigation" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation ast-inline-flex"><ul id="ast-hf-menu-1" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border ast-menu-hover-style-overline  stack-on-mobile"><li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-22"><router-link to="/" aria-current="page" class="menu-link">Home</router-link></li>
+              <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="../#services" class="menu-link">Services</a></li>
+              <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="../#portfolio" class="menu-link">Portfolio</a></li>
               <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="#colophon" class="menu-link">Contact</a></li>
-              <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18">  <router-link :to="{ name: 'Documentations'}" class="menu-link">Documentations</router-link></li>
+              <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18">  <router-link :to="{ name: 'Articles'}" class="menu-link">Articles</router-link></li>
               <li v-if="user" id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><router-link to="/settings" class="menu-link">Settings</router-link></li>
               
             </ul></div>
@@ -46,7 +61,7 @@
                     <br>
                     <li><a href="../#colophon" class="menu-link">Contact</a></li>
                     <br>
-                    <li>  <router-link :to="{ name: 'Documentations', params: {id:  this.id}}" class="menu-link">Documentations</router-link></li>
+                    <li>  <router-link :to="{ name: 'Articles', params: {id:  this.id}}" class="menu-link">Articles</router-link></li>
                     <br>
                     <li v-if="user" ><router-link to="/settings" class="menu-link">Settings</router-link></li>  
                     <br>
@@ -85,13 +100,13 @@
             </div>
         </div>
     
-          <footer class="site-footer" id="colophon" itemtype="https://schema.org/WPFooter" itemscope="itemscope" itemid="#colophon">
+        <footer class="site-footer" id="colophon" itemtype="https://schema.org/WPFooter" itemscope="itemscope" itemid="#colophon">
           <div class="site-primary-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-3-lheavy ast-builder-grid-row-tablet-3-equal ast-builder-grid-row-mobile-full ast-footer-row-inline ast-footer-row-tablet-stack ast-footer-row-mobile-stack" data-section="section-primary-footer-builder">
           <div class="ast-builder-grid-row-container-inner">
           <div class="ast-builder-footer-grid-columns site-primary-footer-inner-wrap ast-builder-grid-row">
           <div class="site-footer-primary-section-1 site-footer-section site-footer-section-1">
           <aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-2" aria-label="Footer Widget 2">
-          <section id="custom_html-3" class="widget_text widget widget_custom_html"><h2 class="widget-title">Thanks to the Internet, Proud of working with you remotely .</h2><div class="textwidget custom-html-widget"><h3><a href="https://wa.me/254794711950"><span style="text-decoration: underline">Whatsapp Me</span></a>
+          <section id="custom_html-3" class="widget_text widget widget_custom_html"><h2 class="widget-title">Thanks to the Internet, Proud of working for you remotely .</h2><div class="textwidget custom-html-widget"><h3><a href="https://wa.me/254794711950"><span style="text-decoration: underline">Whatsapp Me</span></a>
           </h3></div></section> </aside>
           </div>
           <div class="site-footer-primary-section-2 site-footer-section site-footer-section-2">
@@ -123,7 +138,7 @@
           </div>
           </div>
           </div>
-          </footer>
+        </footer>
  
       </div>
     </div>
@@ -253,13 +268,13 @@ export default {
    color: #000;
  
     right: 0; 
-    width: 200px;
+    width: 100px;
+    height: fit-content;
     background-color: #fff;
     box-shadow: 0 4px 0px -1px #9fd3f1;
   }
-  li{
-    margin: 10px;
-  }
+
+ 
   .open{
     background-color: #9fd3f1;
     box-shadow: #79aae6;
@@ -277,13 +292,47 @@ export default {
     box-shadow: 0 4px 0px -1px #9fd3f1;
     max-height: max-content;
     overflow-y: scroll;
+
+  }
+  .sidebar-menu {
+    position: absolute;
+    border-radius: 10px;
+    color: #000;
+    top: 60px;
+    left: 0; 
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 0px -1px #9fd3f1;
+    max-height: max-content;
+    overflow-y: scroll;
+  }
+  .sidebar-menu ul li {
+    margin-left:20px;
+    list-style: none;
+  }
+  .sidebar-menu span {
+   color: #1c68c4;
+  }
+  .open-menu span {
+   color: #1c68c4;
+  }
+  .sidebar-menu ul{
+    margin-left:10px;
   }
   .open-menu ul{
     margin-left:10px;
   }
-  a{
-  text-decoration: none;
+  .open-menu ul li{
+    margin-left:20px;
+    list-style: none;
   }
+  .profile-menu ul li{
+    list-style: none;
+  }
+  .profile-menu ul{
+    margin-left:10px;
+  }
+ 
   .info {
     display: flex;
     align-items: center;
@@ -406,8 +455,7 @@ p{
 }
 
  @media (min-width: 799px) {
- .sidebar-men,
-   .sidebar-left{
+ .open-menu {
   display: none;
   }
   .profile{
@@ -415,7 +463,10 @@ p{
   }
  }
   @media (max-width: 799px) {
-    nav{
+    .sidebar-menu {
+      display: none;
+    }
+    .site-navigation {
       display:none;
     }
   header h3 {
