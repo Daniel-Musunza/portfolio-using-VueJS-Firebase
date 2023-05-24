@@ -12,6 +12,7 @@ import AddExperience from '../components/AddExperience.vue'
 import AddWebsite from '../components/AddWebsite.vue'
 import AddDesign from '../components/AddDesign.vue'
 
+
 // This array defines the routes for the application
 const routes = [
 {
