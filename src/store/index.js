@@ -44,6 +44,7 @@ export default createStore({
             full_stack_guide: [],
             title: "",
             content: true,
+            currentTopic: null,
     }
   },
   getters: {
@@ -117,6 +118,9 @@ fullName(state) {
         setGuideState(state, payload) {
           state.full_stack_guide= payload;
           
+        },
+        setCurrentTopic(state, topic) {
+          state.currentTopic = topic
         },
         webFileNameChange(state, payload) {
           state.webPhotoName = payload;

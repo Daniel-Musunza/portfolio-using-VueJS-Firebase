@@ -222,7 +222,7 @@
     <div class="elementor-icon-box-content">
     <h4 class="elementor-icon-box-title">
     <span>
-    Accademic and Technical Writing</span>
+    academic and Technical Writing</span>
     </h4>
     <p class="elementor-icon-box-description">
     If you are looking for a Quality Writer to help you in your Assignment, I can do it for you in due time at an affordable price.
@@ -416,7 +416,7 @@
     <aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-1" aria-label="Footer Widget 1">
     <section id="nav_menu-3" class="widget widget_nav_menu"><h2 class="widget-title">Services</h2><nav class="menu-services-container" aria-label="Services"><ul id="menu-services" class="menu"><li id="menu-item-124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124"><a href="#" class="menu-link">UI/UX Design</a></li>
     <li id="menu-item-125" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-125"><a href="#" class="menu-link">Web Development</a></li>
-    <li id="menu-item-126" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-126"><a href="#" class="menu-link">Accademic Writing</a></li>
+    <li id="menu-item-126" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-126"><a href="#" class="menu-link">academic Writing</a></li>
     </ul></nav></section> </aside>
     </div>
     </div>

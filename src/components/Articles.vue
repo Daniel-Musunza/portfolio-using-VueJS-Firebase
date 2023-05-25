@@ -13,11 +13,10 @@
                   <h5 style="font-weight:400px; font-size: 20px;">Full-stack Developer Guide </h5>
                   <span  style="font-weight:400px; font-size: medium;">From Zero to Hero Very Fast </span>
                     <li    v-for="(topic, index) in full_stack_guide"
-                    :key="index">
-                <!-- <router-link :to="{ name: 'Documentations', params: {id:  topic.id}}"> -->
+                    :key="index" @click.prevent="viewArticle(topic)">
+               
                                                   
               {{ topic.title }}
-                        <!-- </router-link> -->
                     </li>
                 </ul>
             </div>
@@ -27,7 +26,7 @@
                  <h5 style="font-weight:400px; font-size: 20px;">Full-stack Developer Guide </h5>
                  <span  style="font-weight:400px; font-size: medium;">From Zero to Hero Very Fast </span>
                    <li    v-for="(topic, index) in full_stack_guide"
-                   :key="index">
+                   :key="index"  @click.prevent="viewArticle(topic)">
                <!-- <router-link :to="{ name: 'Documentations', params: {id:  topic.id}}"> -->
                                                  
              {{ topic.title }}
@@ -49,7 +48,7 @@
                 <h5 style="font-weight:400px; font-size: 30px;"><i class="fa-solid fa-bars"></i></h5>
               </div>
             
-             <div v-if="profileMenu " class="profile-menu">
+             <div v-if="profileMenu " @click="toggleProfileMenu" class="profile-menu">
               <div class="info">
                 <div class="right">
                   <ul>
@@ -73,7 +72,7 @@
       <div class="row">
         <div class="form">
               <form  class="form-horizontal form-simple" action="">
-                  <button v-if="user" class="btn blue-bg btn-lg btn-block"  @click.prevent="toggleEditor()">
+                  <button  v-if="user" class="btn btn1 blue-bg btn-lg btn-block"  @click.prevent="toggleEditor()">
                     <span v-if="editor"> close </span><span v-if="!editor"> Open </span>Editor
                   </button>
                   <div v-if="editor" class="editor">
@@ -94,8 +93,13 @@
               
                 </form>
               
-                <div class="content"  v-for="(topic, index) in full_stack_guide" :key="index">
-                  <h1>{{topic.title}}</h1>
+                <div class="content" v-if="currentTopic">
+                  <h3>{{currentTopic.title}}</h3>
+              <p v-html="currentTopic.content"></p>
+            </div>
+            <div class="content" v-if="!currentTopic" v-for="(topic, index) in full_stack_guide.slice(0,1)"
+                    :key="index">
+                  <h3>{{topic.title}}</h3>
               <p v-html="topic.content"></p>
             </div>
         </div>
@@ -121,7 +125,7 @@
           <aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-1" aria-label="Footer Widget 1">
           <section id="nav_menu-3" class="widget widget_nav_menu"><h2 class="widget-title">Services</h2><nav class="menu-services-container" aria-label="Services"><ul id="menu-services" class="menu"><li id="menu-item-124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124"><a href="#" class="menu-link">UI/UX Design</a></li>
           <li id="menu-item-125" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-125"><a href="#" class="menu-link">Web Development</a></li>
-          <li id="menu-item-126" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-126"><a href="#" class="menu-link">Accademic Writing</a></li>
+          <li id="menu-item-126" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-126"><a href="#" class="menu-link">academic Writing</a></li>
           </ul></nav></section> </aside>
           </div>
           </div>
@@ -164,6 +168,7 @@ export default {
         loading: null,
         profileMenu: null,
         openMenu: null,
+        currentIndex: 0,
           editorSettings: {
             modules: {
               imageResize: {},
@@ -220,17 +225,23 @@ export default {
             resetUploader();
           }
         );
+      },
+      viewArticle(topic) {
+      if (!topic) {
+        return;
       }
+        this.$store.commit('setCurrentTopic', topic);
+  },
  },
  computed: {
   ...mapState(['full_stack_guide']),
+  currentTopic() {
+      return this.$store.state.currentTopic
+    },
   user() {
           return this.$store.state.user.loggedIn;
      },
-     topic () {
-      const id = this.$route.params.id||"GM1sM0ivOEOTMk2Efg8Q";
-      return this.topic = this.full_stack_guide.find(topic => topic.id === id);
-    },
+   
   },
  created() {
     this.getGuide();
@@ -274,7 +285,10 @@ export default {
     box-shadow: 0 4px 0px -1px #9fd3f1;
   }
 
- 
+ .btn1 {
+  text-align:center;
+  width:300px;
+ }
   .open{
     background-color: #9fd3f1;
     box-shadow: #79aae6;
@@ -506,13 +520,11 @@ p{
   }
     .row .form {
       margin-left: 20px;
+    
     }
    .row .form .content{
-    margin: 4px;
+    margin-left: 10px;
     width:340px;
-  }
-   .row .form .content{
-    margin: 4px;
   }
  
  button{
