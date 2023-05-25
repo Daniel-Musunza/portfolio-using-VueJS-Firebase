@@ -94,12 +94,14 @@
                 </form>
               
                 <div class="content" v-if="currentTopic">
-                  <h3>{{currentTopic.title}}</h3>
+                  <h3 style="text-align:center;">Full-stack Developer Guide</h3>
+              
               <p v-html="currentTopic.content"></p>
             </div>
             <div class="content" v-if="!currentTopic" v-for="(topic, index) in full_stack_guide.slice(0,1)"
                     :key="index">
-                  <h3>{{topic.title}}</h3>
+                    <h3 style="text-align:center;">Full Stack Developer Guide</h3>
+               
               <p v-html="topic.content"></p>
             </div>
         </div>
