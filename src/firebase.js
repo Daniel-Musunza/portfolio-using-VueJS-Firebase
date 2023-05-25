@@ -17,15 +17,7 @@ import { getPerformance } from "firebase/performance";
 //   appId: "xxxxxxxxxxxxxxxxxxxxx",
 //   measurementId: "xxxxxxxxx"
 // };
-const firebaseConfig = {
-    apiKey: "AIzaSyAZ-cjikP4Pcx-v0-82qD-OTZFzBTti6D4",
-    authDomain: "musunzaportfolio.firebaseapp.com",
-    projectId: "musunzaportfolio",
-    storageBucket: "musunzaportfolio.appspot.com",
-    messagingSenderId: "1008786451341",
-    appId: "1:1008786451341:web:dd2c16b3d8bd07aae36bc4",
-    measurementId: "G-CPFKLMPZNR"
-  };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
